@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int info;
+    struct node *back, *forw;
+};
+int main()
+{
+    int ch;
+    struct node *new,*start=0,*ptr,*temp;
+    printf("SHRESHTHI TAYAL\n");
+    printf("2100290120160\n\n\n");
+    //creating doubly linked list
+    do
+    {
+        new=(struct node*)malloc(sizeof(struct node));
+        printf("Enter the value:");
+        scanf("%d",&new->info);
+        new->forw=0;
+        if(start==NULL)
+        {
+        start=new;
+        new->back=0;
+        }
+        else
+        {
+        ptr->forw=new;
+        }
+        ptr=new;
+        printf("Do you want to create another node, press 1 for yes:");
+        scanf("%d",&ch);
+}
+    while (ch==1);
+    //traversing doubly linear linked
+    printf("Traversal of Doubly linked list is:\n");
+    temp=start;
+    while(temp!=NULL)
+    {
+        printf("%d ",temp->info);
+        temp=temp->forw;
+    }
+    return 0;
+}
